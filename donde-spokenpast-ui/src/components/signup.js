@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Signup extends Componet {
+class Signup extends Component {
     render(){
         return(
             <div><h1>Signup</h1></div>
