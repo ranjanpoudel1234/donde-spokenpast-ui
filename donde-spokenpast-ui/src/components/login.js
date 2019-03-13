@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell, Card, CardTitle, CardActions} from 'react-mdl';
+import { Grid, Cell, Card, CardActions} from 'react-mdl';
 import TextField from 'material-ui/TextField';
 
 import { SubmitButton } from './buttons';
@@ -32,6 +32,7 @@ class Login extends Component {
                                 </form>
                             </CardActions> 
                         </Card>
+                        <a href='/forgotPW'>Reset Password</a>
                     </Cell>
                 </Grid>
         
