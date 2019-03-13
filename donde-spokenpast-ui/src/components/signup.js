@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell} from 'react-mdl';
+import { Grid, Cell, Card, CardTitle, CardActions} from 'react-mdl';
 import TextField from 'material-ui/TextField';
 import { SubmitButton } from './buttons';
 
@@ -19,25 +19,21 @@ class Signup extends Component {
 
     render(){
         return(
-            <div style={{width: '100', margin:'auto',}}>
-                <Grid className="home-grid">
-                    <Cell col={12}>
-                    
-   <div className="banner-text">
-                            <h1></h1>
-                        </div>
-                    </Cell>
-                    <Cell col={12}>
-                        <form onSubmit={e => { this.submitForm(e) }}>
+            <Grid className="home-grid">
+            <Cell col={12} align='middle'>
+                <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
+                    <CardActions> 
+                            <form onSubmit={e => { this.submitForm(e) }}>
                             <TextField required floatingLabelText={`Email`} onChange={(e) => this.setState({ pw: e.target.value })} />
                             <TextField required floatingLabelText={`Username`} onChange={(e) => this.setState({ pw: e.target.value })} />
                             <TextField required floatingLabelText={`Password`} onChange={(e) => this.setState({ pw: e.target.value })} />
                             <SubmitButton />
-                        </form>
-                    </Cell>
-                </Grid>
-            </div>
-        )
+                            </form>
+                    </CardActions> 
+                </Card>
+            </Cell>
+            </Grid>
+       )
     }
 }
 

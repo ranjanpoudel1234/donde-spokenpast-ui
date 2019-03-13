@@ -10,13 +10,13 @@ class App extends Component {
     return (
       <div className="demo-big-content">
       <Layout>
-        <Header className="header-color" title="Title" scroll>
+    <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">SpokenPast</Link>} scroll>
             <Navigation>
             <Link to="/login">Login</Link>
             <Link to="/Signup">Signup</Link>
             </Navigation>
         </Header>
-        <Drawer title="Title">
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">SpokenPast</Link>}>
             <Navigation>
             <Link to="/login">Login</Link>
             <Link to="/Signup">Signup</Link>
