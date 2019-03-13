@@ -12,11 +12,6 @@ class Signup extends Component {
             pw: ''
         }
     }
-    submitForm = (e) => {
-        e.preventDefault() //this stops the page from redireting when you hit submit
-        alert(`Email: ${this.state.email} - PW: ${this.state.pw} - usernm: ${this.state.usernm}` )
-    }
-
     render(){
         return(
             <Grid className="home-grid">

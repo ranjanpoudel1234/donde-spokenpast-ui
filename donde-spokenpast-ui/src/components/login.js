@@ -12,15 +12,8 @@ class Login extends Component {
             pw: ''
         }
     }
-
-    submitForm = (e) => {
-        e.preventDefault() //this stops the page from redireting when you hit submit
-        alert(`Email: ${this.state.email} - PW: ${this.state.pw}`)
-    }
-
-    render(){
+render(){
         return(
-           
                 <Grid className="home-grid">
                     <Cell col={12} align='middle'>
                         <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
