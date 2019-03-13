@@ -10,11 +10,7 @@ class ForgotPW extends Component {
             email: ''
         }
     }
-    submitForm = (e) => {
-        e.preventDefault() //this stops the page from redireting when you hit submit
-        alert(`Password Reset Sent: ${this.state.email}`)
-        window.location.replace('/login')
-    }
+    
 
     render() {
         return (

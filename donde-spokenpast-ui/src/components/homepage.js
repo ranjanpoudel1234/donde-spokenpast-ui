@@ -6,12 +6,13 @@ class Homepage extends Component {
             <div style={{width: '100', margin: 'auto'}}>
              <Grid className="home-grid">
              <Cell col={12}>
-             <div className="banner-text">
-                <h1></h1>
-                
-                </div>
-             </Cell>
-             </Grid>
+             <img 
+             src="https://cdn0.iconfinder.com/data/icons/digital-marketing-15/64/vector_587_15-512.png"
+             alt="spoknpast"
+             className="spoknpast-img"
+             />
+            </Cell>
+            </Grid>
             </div>
 
         )

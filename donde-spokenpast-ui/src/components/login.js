@@ -32,11 +32,10 @@ class Login extends Component {
                                 </form>
                             </CardActions> 
                         </Card>
-                        <a href='/forgotPW'>Reset Password</a>
+                        <a href='/forgotPW' style={{textDecoration: 'none', color: 'Blue'}}>Reset Password</a>
                     </Cell>
                 </Grid>
-        
-        )
+                   )
     }
 }
 
