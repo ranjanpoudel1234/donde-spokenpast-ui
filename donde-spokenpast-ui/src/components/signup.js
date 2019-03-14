@@ -24,7 +24,7 @@ class Signup extends Component {
                             <TextField required floatingLabelText={`Password`} onChange={(e) => this.setState({ pw: e.target.value })} />
                             <SubmitButton />
                             </form>
-                    </CardActions> 
+                           </CardActions> 
                 </Card>
             </Cell>
             </Grid>

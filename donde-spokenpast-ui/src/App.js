@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl'
-
 import Routes from './router';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div className="demo-big-content">
       <Layout>
-    <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">SpokenPast</Link>} scroll>
+        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">SpokenPast</Link>} scroll>
             <Navigation>
             <Link to="/login">Login</Link>
             <Link to="/Signup">Signup</Link>
