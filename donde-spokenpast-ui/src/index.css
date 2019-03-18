@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}

@@ -14,13 +14,15 @@ class ForgotPW extends Component {
         return(
             <Grid className="home-grid">
             <Cell col={12} align='middle'>
-                <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
-                    <CardActions> 
+               <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
+               <CardActions>
                             <form onSubmit={e => { this.submitForm(e) }}>
                             <TextField required floatingLabelText={`Email`} onChange={(e) => this.setState({ pw: e.target.value })} />
+                            <div class="space">
                             <SubmitButton />
+                            </div>
                             </form>
-                    </CardActions> 
+                </CardActions> 
                 </Card>
             </Cell>
             </Grid>

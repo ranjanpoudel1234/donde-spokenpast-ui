@@ -33,23 +33,46 @@ render(){
                                 <form onSubmit={e => { this.submitForm(e) }}>
                                     <TextField required floatingLabelText={`Email`} onChange={(e) => this.setState({ pw: e.target.value })} />
                                     <TextField required floatingLabelText={`Password`} onChange={(e) => this.setState({ pw: e.target.value })} />
-                                    <GoogleLogin
-                                        clientId="745809376832-8mg46nv4h2b6cokflvj96logvsa0di6t.apps.googleusercontent.com"
-                                        buttonText="GOOGLE"
-                                        onSuccess={responseGoogle}
-                                        onFailure={responseGoogle}
-                                    />
-                                    <FacebookLogin
-                                        appId="352446695358924"
-                                        fields="name,email,picture"
-                                        callback={responseFacebook}
-                                    />
                                     <br/>
                                     <SubmitButton />
+                                    <br/>
+
+                                    <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
+                                    
+                                    <br/>
+                                    <br/>
+                                    <br/>
+
+                                    
+                            <div style={{alignItems: 'center' }} >                           
+                                 <FacebookLogin
+                                   appId="352446695358924"
+                                   autoLoad={false}
+                                   fields="name,email,picture"
+                                   callback={this.props.SocialSignUp}
+                                   cssClass="btnFacebook"
+                                   icon={<i className="fa fa-facebook" style={{marginRight:'5px'}}>
+                                   </i>}
+                                   textButton = "&nbsp;&nbsp;Sign In with Facebook"                                                                
+                                  />
+                                <GoogleLogin
+                                    clientId="745809376832-8mg46nv4h2b6cokflvj96logvsa0di6t.apps.googleusercontent.com"
+                                    onSuccess={this.props.SocialSignUp}
+                                    onFailure={this.props.SocialSignUp}
+                                    cssClass="btnGoogle"
+                                >
+                                    <i className="fa fa-google-plus" style={{ marginRight: 
+                                    '5px' }}/> 
+                                    <span>&nbsp;&nbsp;Sign In with Google</span>                                                               
+                                </GoogleLogin>
+                            </div>
+                             <br/>
+                             <br/>
+                            <a href='/signup' style={{textDecoration: 'none', color: 'Blue'}}>Not a member? SignUp Now</a>
                                 </form>
                             </CardActions> 
                         </Card>
-                        <a href='/forgotPW' style={{textDecoration: 'none', color: 'Blue'}}>Reset Password</a>
+                        
                     </Cell>
                 </Grid>
         )

@@ -22,4 +22,43 @@
   padding-top: 5em;
 }
 
+.space { 
+  margin-top: 50px; 
+}
 
+.space1 { 
+  margin-top: 200px; 
+}
+
+.btnFacebook { 
+  width: 165px;
+  height:35px;  
+  border-radius: 4px;
+  background: #3b5998;
+  color:white;
+  border:0px transparent;  
+  text-align: center;
+  margin:5px;
+  display: inline-block;
+}
+.btnGoogle { 
+  width: 165px;
+  height:35px;  
+  border-radius: 4px;
+  background: #db3236;
+  color:white;
+  border:0px transparent;  
+  text-align: center;
+  margin:5px;
+  display: inline-block
+
+}
+@media only screen and (max-width : 399px) {
+  .btnFacebook,.btnGoogle{
+    width: 100%
+  }
+}
+
+a {
+  font-size: 14px; 
+}

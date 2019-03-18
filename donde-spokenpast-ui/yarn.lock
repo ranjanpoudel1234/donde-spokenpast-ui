@@ -1659,12 +1659,29 @@ babel-plugin-named-asset-import@^0.3.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.0.tgz#3289ec622d19cd1cc84df8d784b41f1b048bd524"
   integrity sha512-to6Shd/r8fMRRg/MaOhDNfqpuXfjlQx3ypWDG6jh4ESCVZDJCgdgIalZbrnVlBPGgH/QeyHMjnGb2W+JJiy+NQ==
 
+babel-plugin-ramda-patch@1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ramda-patch/-/babel-plugin-ramda-patch-1.1.6.tgz#0303003aca2ebb4e610236caed498e3b9001f9ee"
+  integrity sha1-AwMAOsouu05hAjbK7UmOO5AB+e4=
+  dependencies:
+    ramda "^0.19.1"
+
 babel-plugin-syntax-object-rest-spread@^6.13.0, babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
   integrity sha1-/WU28rzhODb/o6VFjEkDpZe7O/U=
 
-babel-plugin-transform-object-rest-spread@^6.26.0:
+babel-plugin-transform-es2015-modules-commonjs@^6.18.0:
+  version "6.26.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-commonjs/-/babel-plugin-transform-es2015-modules-commonjs-6.26.2.tgz#58a793863a9e7ca870bdc5a881117ffac27db6f3"
+  integrity sha512-CV9ROOHEdrjcwhIaJNBGMBCodN+1cfkwtM1SbUHmvyy35KGT7fohbpOxkE2uLz1o6odKK2Ck/tz47z+VqQfi9Q==
+  dependencies:
+    babel-plugin-transform-strict-mode "^6.24.1"
+    babel-runtime "^6.26.0"
+    babel-template "^6.26.0"
+    babel-types "^6.26.0"
+
+babel-plugin-transform-object-rest-spread@^6.22.0, babel-plugin-transform-object-rest-spread@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
   integrity sha1-DzZpLVD+9rfi1LOsFHgTepY7ewY=
@@ -1676,6 +1693,14 @@ babel-plugin-transform-react-remove-prop-types@0.4.20:
   version "0.4.20"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.20.tgz#688bdea1e27ea0023775dea817fa2d3f8df8802b"
   integrity sha512-bWQ8e7LsgdFpyHU/RabjDAjVhL7KLAJXEt0nb0LANFje8YAGA8RlZv88a72aCswOxELWULkYuJqfFoKgs58Tng==
+
+babel-plugin-transform-strict-mode@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-strict-mode/-/babel-plugin-transform-strict-mode-6.24.1.tgz#d5faf7aa578a65bbe591cf5edae04a0c67020758"
+  integrity sha1-1fr3qleKZbvlkc9e2uBKDGcCB1g=
+  dependencies:
+    babel-runtime "^6.22.0"
+    babel-types "^6.24.1"
 
 babel-preset-jest@^23.2.0:
   version "23.2.0"
@@ -1757,7 +1782,7 @@ babel-traverse@^6.0.0, babel-traverse@^6.18.0, babel-traverse@^6.26.0:
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.26.0:
+babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   integrity sha1-o7Bz+Uq0nrb6Vc1lInozQ4BjJJc=
@@ -4566,6 +4591,11 @@ hmac-drbg@^1.0.0:
     hash.js "^1.0.3"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
+
+hmacsha1@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hmacsha1/-/hmacsha1-1.0.0.tgz#c1b7ae03a4ea116348090af14f8148c12938a917"
+  integrity sha1-wbeuA6TqEWNICQrxT4FIwSk4qRc=
 
 hoek@4.x.x:
   version "4.2.1"
@@ -8218,6 +8248,16 @@ raf@3.4.0:
   dependencies:
     performance-now "^2.1.0"
 
+ramda@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.19.1.tgz#89c4ad697265ff6b1face9f286439e2520d6679c"
+  integrity sha1-icStaXJl/2sfrOnyhkOeJSDWZ5w=
+
+ramda@^0.22.1:
+  version "0.22.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.22.1.tgz#031da0c3df417c5b33c96234757eb37033f36a0e"
+  integrity sha1-Ax2gw99BfFszyWI0dX6zcDPzag4=
+
 randomatic@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
@@ -8364,6 +8404,17 @@ react-mdl@^1.11.0:
     classnames "^2.2.3"
     lodash.isequal "^4.4.0"
     prop-types "^15.5.0"
+
+react-native-simple-auth@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-simple-auth/-/react-native-simple-auth-2.4.0.tgz#bc3747f753c7c85a89eda88f6d1f49c691e65157"
+  integrity sha512-eAkYag0bfdK7/MLOnzZuivgNNdzV8WJSZJQL6xVfgHFMiISRrv8zSX6O/KgEMNeXNKEoh7oTmmCCzTn5xonApQ==
+  dependencies:
+    babel-plugin-ramda-patch "1.1.6"
+    babel-plugin-transform-es2015-modules-commonjs "^6.18.0"
+    babel-plugin-transform-object-rest-spread "^6.22.0"
+    hmacsha1 "^1.0.0"
+    ramda "^0.22.1"
 
 react-router-dom@^4.3.1:
   version "4.3.1"
