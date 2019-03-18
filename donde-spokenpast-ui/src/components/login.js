@@ -36,9 +36,11 @@ render(){
                                     <br/>
                                     <SubmitButton />
                                     <br/>
+                                    <div class="hyper-link">
+
 
                                     <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
-                                    
+                                    </div>
                                     <br/>
                                     <br/>
                                     <br/>
@@ -68,7 +70,10 @@ render(){
                             </div>
                              <br/>
                              <br/>
+                             <div class="hyper-link">
+
                             <a href='/signup' style={{textDecoration: 'none', color: 'Blue'}}>Not a member? SignUp Now</a>
+                            </div>
                                 </form>
                             </CardActions> 
                         </Card>
