@@ -18,7 +18,7 @@
 }
 
 .spoknpast-img{
-  height: 250px;
+  height: 500px;
   padding-top: 5em;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .space1 { 
-  margin-top: 200px; 
+  margin-top: 40px; 
 }
 
 .btnFacebook { 
@@ -61,4 +61,11 @@
 
 .hyper-link {
   font-size: 14px; 
+}
+
+.full-body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color:#38ef7d;
 }

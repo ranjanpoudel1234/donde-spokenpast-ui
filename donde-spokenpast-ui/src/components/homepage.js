@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Grid, Cell} from 'react-mdl';
+import { Grid, Cell, Card, CardTitle, CardActions} from 'react-mdl';
 class Homepage extends Component {
     render(){
         return(
+            <div className="full-body">
+           
             <div style={{width: '100', margin: 'auto'}}>
              <Grid className="home-grid">
              <Cell col={12}>
@@ -16,7 +18,8 @@ class Homepage extends Component {
             </Cell>
             </Grid>
             </div>
-
+            
+            </div>
         )
     }
 }

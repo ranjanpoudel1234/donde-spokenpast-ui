@@ -37,15 +37,12 @@ render(){
                                     <SubmitButton />
                                     <br/>
                                     <div class="hyper-link">
-
-
-                                    <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
+                                 <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
                                     </div>
                                     <br/>
                                     <br/>
                                     <br/>
 
-                                    
                             <div style={{alignItems: 'center' }} >                           
                                  <FacebookLogin
                                    appId="352446695358924"
