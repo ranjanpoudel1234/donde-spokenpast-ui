@@ -6,7 +6,7 @@ import Drawer from 'material-ui/Drawer'
 import Dialog from 'material-ui/Dialog'
 
 //submit button for forms 
-export const SubmitButton = () => <RaisedButton primary={true} fullWidth='true' type='submit' label='Submit' />
+export const SubmitButton = (props) => <RaisedButton primary={true} disabled={props.disabled} fullWidth='true' type='submit' label='Submit' />
 
 //toggles a drawer
 //pass drawer a component to display

@@ -3,18 +3,66 @@ import { Grid, Cell, Card, CardActions} from 'react-mdl';
 import TextField from 'material-ui/TextField';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
+import Snackbar from '@material-ui/core/Snackbar';
 
 import { SubmitButton } from './buttons';
 
-class Login extends Component {
+const error = {
+    color : 'red',
+}
+
+export const docSel = (elem) => document.getElementById(elem);
+
+export default class Login extends Component {
     constructor(props) {
         super(props)
         this.state = {
             email: '',
-            pw: ''
+            pwd: '',
+            hasError: true,
+            userRegistration : this.props.history.location.state == undefined ? false : this.props.history.location.state.userRegistration,
         }
     }
-render(){
+
+    shouldDisableBtn = () => this.setState({hasError: this.state.email === "" || this.state.pwd === ""});  
+
+    checkLogin = (e) => {
+        e.preventDefault();
+    }
+
+    emailChange = (e) => {
+        let emailElem = docSel('emailError');
+        let newEmail = e.target.value;
+        this.setState({ email: newEmail });
+        if (newEmail === '') {
+            emailElem.innerHTML = "Please enter your email.";
+        } else {
+            console.log(e.target.value);
+            console.log(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(newEmail)));
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(newEmail))) {
+                emailElem.innerHTML = "Please enter valid email.";
+            } else {
+                emailElem.innerHTML = "";
+            }
+        }
+        this.shouldDisableBtn();
+    }
+
+    changePwd = (e) => {
+        let pwdElem = docSel('pwdError');
+        let newPwd = e.target.value;
+        this.setState({ pwd: newPwd });
+
+        if (newPwd === '') {
+            pwdElem.innerHTML = "Please enter your password.";
+        } else {
+            pwdElem.innerHTML = "";
+        }
+        this.shouldDisableBtn();
+    }
+
+
+    render() {
   
         const responseGoogle = (response) => {
             console.log(response);
@@ -25,19 +73,20 @@ render(){
         }
 
         return(
-            
                 <Grid className="home-grid">
                     <Cell col={12} align='middle'>
                         <Card shadow={5} style={{minWidth:'1000', margin:'auto'}}>
                             <CardActions> 
-                                <form onSubmit={e => { this.submitForm(e) }}>
-                                    <TextField required floatingLabelText={`Email`} onChange={(e) => this.setState({ pw: e.target.value })} />
-                                    <TextField required floatingLabelText={`Password`} onChange={(e) => this.setState({ pw: e.target.value })} />
+                                <form onSubmit={this.checkLogin}>
+                                    <TextField floatingLabelText={`Email`} onChange={this.emailChange} />
+                                    <p style={error} id="emailError"></p>
+                                    <TextField  floatingLabelText={`Password`} onChange={this.changePwd}/>
+                                    <p style={error} id="pwdError"></p>
                                     <br/>
-                                    <SubmitButton />
+                                    <SubmitButton id="loginBtn" disabled={this.state.hasError}/>
                                     <br/>
-                                    <div class="hyper-link">
-                                 <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
+                                    <div className="hyper-link">
+                                    <a href='/forgotPW' style={{float:'right', textDecoration: 'none', color: 'Blue'}}>Forget Your Password?</a>
                                     </div>
                                     <br/>
                                     <br/>
@@ -50,8 +99,7 @@ render(){
                                    fields="name,email,picture"
                                    callback={this.props.SocialSignUp}
                                    cssClass="btnFacebook"
-                                   icon={<i className="fa fa-facebook" style={{marginRight:'5px'}}>
-                                   </i>}
+                                   icon = "true"
                                    textButton = "&nbsp;&nbsp;Sign In with Facebook"                                                                
                                   />
                                 <GoogleLogin
@@ -67,7 +115,7 @@ render(){
                             </div>
                              <br/>
                              <br/>
-                             <div class="hyper-link">
+                             <div className="hyper-link">
 
                             <a href='/signup' style={{textDecoration: 'none', color: 'Blue'}}>Not a member? SignUp Now</a>
                             </div>
@@ -76,9 +124,18 @@ render(){
                         </Card>
                         
                     </Cell>
+                    <Snackbar
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'center',
+                        }}
+                        open = {this.state.userRegistration}
+                        autoHideDuration={3000}
+                        message="User successfully registered! Please login using your credentials"
+                    >
+                    </Snackbar>
                 </Grid>
         )
     }
 }
 
-export default Login;
