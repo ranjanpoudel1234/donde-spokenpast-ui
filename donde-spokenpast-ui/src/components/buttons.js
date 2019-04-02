@@ -4,6 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import Drawer from 'material-ui/Drawer'
 import Dialog from 'material-ui/Dialog'
+import Button from '@material-ui/core/Button'
 
 //submit button for forms 
 export const SubmitButton = (props) => <RaisedButton primary={true} disabled={props.disabled} fullWidth='true' type='submit' label='Submit' />

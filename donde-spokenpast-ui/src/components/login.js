@@ -117,7 +117,7 @@ export default class Login extends Component {
                              <br/>
                              <div className="hyper-link">
 
-                            <a href='/signup' style={{textDecoration: 'none', color: 'Blue'}}>Not a member? SignUp Now</a>
+                            <a href='/signup' style={{textDecoration: 'none', color: 'Blue'}}>Not a member? Sign Up Now</a>
                             </div>
                                 </form>
                             </CardActions> 

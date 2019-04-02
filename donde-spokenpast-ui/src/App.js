@@ -1,34 +1,22 @@
 import React, { Component } from 'react';
-import './App.css';
-import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl'
+//import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl'
+import Button from '@material-ui/core/Button';
+import Bookmarks from '@material-ui/icons/Bookmarks';
 import Routes from './router';
 import { Link } from 'react-router-dom';
 
+
+import './App.css';
+import Navbar from './components/Navbar';
 class App extends Component {
   render() {
     return (
-      <div className="demo-big-content">
-      <Layout>
-        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">SpokenPast</Link>} scroll>
-            <Navigation>
-            <Link to="/login">Login</Link>
-            <Link to="/Signup">Signup</Link>
-            </Navigation>
-        </Header>
-        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">SpokenPast</Link>}>
-            <Navigation>
-            <Link to="/login">Login</Link>
-            <Link to="/Signup">Signup</Link>
-            </Navigation>
-        </Drawer>
-        <Content>
-            <div className="page-content" />
-            <Routes/>
-        </Content>
-    </Layout>
-    
-</div>
-
+      <div>
+        <Navbar/>
+        <Button variant="outlined" color="primary">
+          <Bookmarks></Bookmarks>
+        </Button>
+      </div>
     );
   }
 }
