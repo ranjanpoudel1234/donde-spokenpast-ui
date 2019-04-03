@@ -9,8 +9,9 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
 import { ButtonBase } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const styles = {
     list: {
@@ -43,11 +44,16 @@ class NavDrawer extends Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
-                    {['Login', 'Register'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemText primary={text} />
+                    <ListItem component={Link} to="/login">
+                    <ListItemText
+                        primary="Login" 
+                    />
                     </ListItem>
-                    ))}
+                    <ListItem component={Link} to="/signup">
+                    <ListItemText
+                        primary="Signup" 
+                    />
+                    </ListItem>
                 </List>
             </div>
         );
