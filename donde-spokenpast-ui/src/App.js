@@ -13,9 +13,6 @@ class App extends Component {
     return (
       <div>
         <Navbar/>
-        <Button variant="outlined" color="primary">
-          <Bookmarks></Bookmarks>
-        </Button>
       </div>
     );
   }
