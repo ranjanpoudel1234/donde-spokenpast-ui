@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Cell, Card, CardTitle, CardActions} from 'react-mdl';
+import { Grid, Cell, Card, CardActions} from 'react-mdl';
 import TextField from 'material-ui/TextField';
-import { SubmitButton } from './buttons';
+import { SubmitButton } from '../components/buttons';
 import { Redirect } from "react-router-dom";
-import Login, { docSel} from './login';
+import { docSel} from './login';
 
 const error = {
     color : 'red',
@@ -11,7 +11,7 @@ const error = {
 
 var newEmail, newPwd, confirmPwd, newUserName = '';
 const URL = "https://reqres.in";
-class Signup extends Component {    
+class Signup extends Component {
     constructor(props) {
         super(props)
         this.state = {

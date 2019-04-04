@@ -5,7 +5,7 @@ import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import Snackbar from '@material-ui/core/Snackbar';
 
-import { SubmitButton } from './buttons';
+import { SubmitButton } from '../components/buttons';
 
 const error = {
     color : 'red',

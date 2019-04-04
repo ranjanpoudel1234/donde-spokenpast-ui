@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell, Card, CardTitle, CardActions} from 'react-mdl';
+import { Grid, Cell} from 'react-mdl';
 class Homepage extends Component {
     render(){
         return(

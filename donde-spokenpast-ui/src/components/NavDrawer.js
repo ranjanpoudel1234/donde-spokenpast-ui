@@ -9,8 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
-import { ButtonBase } from '@material-ui/core';
+
 import { Link } from 'react-router-dom';
 
 const styles = {
@@ -19,6 +18,10 @@ const styles = {
     },
     fullList: {
       width: 'auto',
+    },
+    menuButton: {
+        marginLeft: -12,
+        marginRight: 20,
     },
 }
 
@@ -60,7 +63,7 @@ class NavDrawer extends Component {
 
         return(
             <div>
-                <IconButton onClick={this.toggleDrawer('left', true)}><MenuIcon/></IconButton>
+                <IconButton className={classes.menuButton} color="inherit" onClick={this.toggleDrawer('left', true)}><MenuIcon/></IconButton>
                 <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
                     <div
                         tabIndex={0}
