@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Grid, Cell, Card, CardActions} from 'react-mdl';
-import TextField from 'material-ui/TextField';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
+import TextField from '@material-ui/core/TextField';
 import Snackbar from '@material-ui/core/Snackbar';
-
 import { SubmitButton } from '../components/buttons';
 
 const error = {
@@ -73,14 +72,14 @@ export default class Login extends Component {
         }
 
         return(
-                <Grid className="home-grid">
+            <Grid className="home-grid">
                     <Cell col={12} align='middle'>
                         <Card shadow={5} style={{minWidth:'1000', margin:'auto'}}>
                             <CardActions> 
                                 <form onSubmit={this.checkLogin}>
-                                    <TextField floatingLabelText={`Email`} onChange={this.emailChange} />
+                                    <TextField id="Email" label="Email" fullWidth="true" color="inherit" onChange={this.emailChange} />
                                     <p style={error} id="emailError"></p>
-                                    <TextField  floatingLabelText={`Password`} onChange={this.changePwd}/>
+                                    <TextField  id="Password" label="Password" fullWidth="true" color="inherit"  onChange={this.changePwd}/>
                                     <p style={error} id="pwdError"></p>
                                     <br/>
                                     <SubmitButton id="loginBtn" disabled={this.state.hasError}/>
@@ -122,8 +121,6 @@ export default class Login extends Component {
                                 </form>
                             </CardActions> 
                         </Card>
-                        
-                    </Cell>
                     <Snackbar
                         anchorOrigin={{
                             vertical: 'bottom',
@@ -131,10 +128,9 @@ export default class Login extends Component {
                         }}
                         open = {this.state.userRegistration}
                         autoHideDuration={3000}
-                        message="User successfully registered! Please login using your credentials"
-                    >
-                    </Snackbar>
-                </Grid>
+                        message="User successfully registered! Please login using your credentials"/>
+                </Cell>
+            </Grid>
         )
     }
 }
