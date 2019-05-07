@@ -19,7 +19,10 @@ class App extends Component {
           <Header
             className="header-color"
             title={
-              <Link style={{ textDecoration: "none", color: "white" }} to="/">
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/Index"
+              >
                 SpokenPast
               </Link>
             }
@@ -28,6 +31,7 @@ class App extends Component {
             {localStorage.getItem("Id") ? (
               <Navigation>
                 <Link to="/EditProfile"> My Profile </Link>
+                <Link to="/UploadVideo"> Upload Video </Link>
                 <a style={pointer} onClick={this.logout}>
                   {" "}
                   Logout
@@ -50,6 +54,7 @@ class App extends Component {
             {localStorage.getItem("Id") ? (
               <Navigation>
                 <Link to="/EditProfile"> My Profile </Link>
+                <Link to="/UploadVideo"> Upload Video </Link>
                 <a onClick={this.logout}>Logout</a>
               </Navigation>
             ) : (

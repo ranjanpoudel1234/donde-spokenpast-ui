@@ -64,6 +64,34 @@ export default class EditProfile extends Component {
       });
   };
 
+  handlePhone = e => {
+    this.setState({ phone: e.target.value });
+  };
+
+  handlePassword = e => {
+    this.setState({ password: e.target.value });
+  };
+
+  updateUser = ev => {
+    ev.preventDefault();
+    this.setState({ Error: "" });
+    let userToUpdate = {
+      Id: localStorage.getItem("Id"),
+      Phone: this.state.phone,
+      Password: this.state.password
+    };
+    if (this.state.password != "") {
+      axios.post(URL + "/Users/UpdateUser", userToUpdate).then(res => {
+        console.log(res);
+        if (res.data.message) {
+          this.setState({ Error: res.data.message });
+        }
+      });
+    } else {
+      this.setState({ Error: "Password cannot be empty" });
+    }
+  };
+
   render() {
     return (
       <div>
@@ -73,6 +101,7 @@ export default class EditProfile extends Component {
               Edit your Profile Details
             </Typography>
             <hr />
+            {this.state.Error}
             <form noValidate autoComplete="off">
               <TextField
                 id="filled-name"
@@ -81,6 +110,7 @@ export default class EditProfile extends Component {
                 // onChange={this.handleChange("name")}
                 margin="normal"
                 variant="filled"
+                disabled
               />
               <br />
               <TextField
@@ -90,29 +120,31 @@ export default class EditProfile extends Component {
                 // onChange={this.handleChange("name")}
                 margin="normal"
                 variant="filled"
+                disabled
               />
               <br />
               <TextField
                 id="filled-name"
                 label="Password"
                 value={this.state.password}
-                // onChange={this.handleChange("name")}
+                onChange={this.handlePassword}
                 margin="normal"
                 variant="filled"
+                type="password"
               />
               <br />
               <TextField
                 id="filled-name"
                 label="Phone"
                 value={this.state.phone}
-                // onChange={this.handleChange("name")}
+                onChange={this.handlePhone}
                 margin="normal"
                 variant="filled"
               />
             </form>
           </CardContent>
           <CardActions>
-            <Button color="primary" size="small">
+            <Button color="primary" size="small" onClick={this.updateUser}>
               Update Profile
             </Button>
           </CardActions>

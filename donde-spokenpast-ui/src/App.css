@@ -1,74 +1,86 @@
-.header-color{
-  background: #00B4DB;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+.header-color {
+  background: #00b4db; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0083b0,
+    #00b4db
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0083b0,
+    #00b4db
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .home-grid {
-  background: #11998e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
   position: relative;
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
-.spoknpast-img{
+.spoknpast-img {
   height: 500px;
   padding-top: 5em;
 }
 
-.space { 
-  margin-top: 50px; 
+.space {
+  margin-top: 50px;
 }
 
-.space1 { 
-  margin-top: 40px; 
+.space1 {
+  margin-top: 40px;
 }
 
-.btnFacebook { 
+.btnFacebook {
   width: 165px;
-  height:35px;  
+  height: 35px;
   border-radius: 4px;
   background: #3b5998;
-  color:white;
-  border:0px transparent;  
+  color: white;
+  border: 0px transparent;
   text-align: center;
-  margin:5px;
+  margin: 5px;
   display: inline-block;
 }
-.btnGoogle { 
+.btnGoogle {
   width: 165px;
-  height:35px;  
+  height: 35px;
   border-radius: 4px;
   background: #db3236;
-  color:white;
-  border:0px transparent;  
+  color: white;
+  border: 0px transparent;
   text-align: center;
-  margin:5px;
-  display: inline-block
-
+  margin: 5px;
+  display: inline-block;
 }
-@media only screen and (max-width : 399px) {
-  .btnFacebook,.btnGoogle{
-    width: 100%
+@media only screen and (max-width: 399px) {
+  .btnFacebook,
+  .btnGoogle {
+    width: 100%;
   }
 }
 
 .hyper-link {
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 .full-body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color:#38ef7d;
+  background-color: #38ef7d;
 }
-
-
-

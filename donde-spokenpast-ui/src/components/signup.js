@@ -155,11 +155,13 @@ class Signup extends Component {
                     password
                     floatingLabelText={`Password`}
                     onChange={this.pwdChange}
+                    type="password"
                   />
                   <p style={error} id="pwdError" />
                   <TextField
                     floatingLabelText={`Confirm Password`}
                     onChange={this.confirmPwdChange}
+                    type="password"
                   />
                   <p style={error} id="confirmPwdError" />
                   <br />

@@ -122,6 +122,7 @@ export default class Login extends Component {
                   <TextField
                     floatingLabelText={`Password`}
                     onChange={this.changePwd}
+                    type="password"
                   />
                   <p style={error} id="pwdError" />
                   <br />

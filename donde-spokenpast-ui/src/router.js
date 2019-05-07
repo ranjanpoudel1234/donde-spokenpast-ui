@@ -8,6 +8,7 @@ import Index from "./components/Index";
 import { PrivateRoute } from "./PrivateRoute";
 import { NonPrivateRoute } from "./NonPrivateRoute";
 import EditProfile from "./components/EditProfile";
+import UploadVideo from "./components/UploadVideo";
 
 const Routes = () => (
   <Switch>
@@ -17,6 +18,7 @@ const Routes = () => (
     <Route path="/forgotPW" component={ForgotPW} />
     <PrivateRoute path="/Index" component={Index} />
     <PrivateRoute path="/EditProfile" component={EditProfile} />
+    <PrivateRoute path="/UploadVideo" component={UploadVideo} />
   </Switch>
 );
 
