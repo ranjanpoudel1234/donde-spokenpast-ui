@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import UniqueID from 'react-html-id'
-import mediaItem from 'mediaItem'
+import mediaItem from './mediaItem'
 
 export default class Index extends Component {
 
@@ -9,8 +9,8 @@ export default class Index extends Component {
     UniqueID.enableUniqueIds(this);
     this.state = {
       mediaItems:[
-        {id:this.nextUniqueId(), url:"https://www.youtube.com/watch?v=U7IruHt4ydA", title:"Vid_1"},
-        {id:this.nextUniqueId()}, url:"https://www.youtube.com/watch?v=IPaqC6xsbSw", title:"Vid_2"},
+        {id:this.nextUniqueId(), url:'https://www.youtube.com/watch?v=U7IruHt4ydA', title:'Vid_1'},
+        {id:this.nextUniqueId(), url:'https://www.youtube.com/watch?v=IPaqC6xsbSw', title:'Vid_2'},
       ]
     };
 
